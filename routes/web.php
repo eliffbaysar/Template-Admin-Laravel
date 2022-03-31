@@ -33,6 +33,12 @@ Route::get('/test/{id}/{name}', [HomeController::class,'test'])->whereNumber('id
 
 Route::get('admin', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminhome');
 
+Route::get('/admin/login', [HomeController::class, 'login'])->name('adminhome');
+Route::get('admin', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminhome');
+Route::get('admin', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminhome');
+
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

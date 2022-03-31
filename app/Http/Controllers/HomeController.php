@@ -8,31 +8,35 @@ class HomeController extends Controller
 {
     //
     public function index()
-        {
-            return view ('home.index');
-        }
+    {
+        return view('home.index');
+    }
 
-        public function about()
-        {
-            return view ('home.about');
-        }
-    
 
-        public function test($id,$name)
-    
+    public function aboutus()
+    {
+        return view('home.about');
+    }
+
+
+   
+
+
+
+
+    public function test($id,$name)
+    {
+
+        return view('home.test',['id'=>$id,'name'=>$name]);
+
+        /*
+        echo "Id Number :",$id;
+        echo "<br>Name :",$name;
+        for($i=1;$i<=$id;$i++)
         {
-            $data['id']=$id;
-            $data['name']=$name;
-            
-            return view ('home.test',$data);
-            /*
-            echo "ıd number:", $id;
-            echo "<br>Name:" , $name;
-            for($i=1; $i<=$id; $i++)
-            {
-                echo "<br> $i - $name";
-            }
-        
+            echo "<br> $i-$name";
+        }
         */
     }
+
 }
