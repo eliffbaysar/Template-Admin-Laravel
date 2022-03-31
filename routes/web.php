@@ -1,7 +1,7 @@
 <?php
+
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -14,30 +14,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get ('/', function()
-{
+Route::get('/home2', function () {
     return view('welcome');
 });
 
-Route::redirect('anasayfa', '/home')->name('anasayfa');
 
-Route::get ('/', function()
-{
+Route::redirect('/anasayfa', '/home')->name('anasayfa');
+
+Route::get('/', function () {
     return view('home.index');
 });
-Route::get ('/home',[HomeController::class,'index'])->name('home');
-Route::get ('/about',[HomeController::class,'about'])->name('about');
-
-//Route::get ('/test/{id}{name}', [HomeController::class,'test']) -> where ('id','[0-9]+');
-Route::get('/test/{id}/{name}', [HomeController::class,'test'])->whereNumber('id')->whereAlpha('name')->name('test');
-
-Route::get('admin', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminhome');
-
-Route::get('/admin/login', [HomeController::class, 'login'])->name('adminhome');
-Route::get('admin', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminhome');
-Route::get('admin', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminhome');
 
 
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
+
+//Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->where(['id'=>'[0-9]+','name'=>'[A-Za-z]+']);
+Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->whereNumber('id')->whereAlpha('name')->name('test');
+
+//Admin
+Route::get('/admin', [\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminhome');
 
 Route::middleware([
     'auth:sanctum',

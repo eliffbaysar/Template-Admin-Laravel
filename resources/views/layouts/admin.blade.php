@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +18,7 @@
   <!-- JQVMap -->
   <link rel="stylesheet" href="{{asset('assets')}}/admin/plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="{{asset('assets')}}/admin/dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="{{asset('assets')}}/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
@@ -30,13 +29,13 @@
   @yield('javascript')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-    <div class="wrapper">
-        @include('admin._header')
-        @include('admin._sidebar')
-       @yield('content')
-        @include('admin._footer')
-        @yield('footer')
 
-        
+<div class="wrapper">
+    @include('admin._header')
+    @include('admin._sidebar')
+    @yield('content')
+    @include('admin._footer')
+    @yield('footer')
+
 </body>
 </html>

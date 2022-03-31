@@ -1,6 +1,6 @@
 
 
-<footer class="main-footer">
+ <footer class="main-footer">
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
@@ -41,7 +41,7 @@
 <!-- Tempusdominus Bootstrap 4 -->
 <script src="{{asset('assets')}}/admin/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 <!-- Summernote -->
-<script src="{{asset('assets')}}/admin/lugins/summernote/summernote-bs4.min.js"></script>
+<script src="{{asset('assets')}}/admin/plugins/summernote/summernote-bs4.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="{{asset('assets')}}/admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
@@ -50,3 +50,4 @@
 <script src="{{asset('assets')}}/admin/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('assets')}}/admin/dist/js/pages/dashboard.js"></script>
+
