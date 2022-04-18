@@ -47,7 +47,7 @@ Route::get('/category/edit/{id}',[\App\Http\Controllers\Admin\CategoryController
 Route::post('/category/update/{id}',[\App\Http\Controllers\Admin\CategoryController::class,'update'])->name('admin_category_update');
 Route::get('/category/delete/{id}',[\App\Http\Controllers\Admin\CategoryController::class,'destroy'])->name('admin_category_delete');
 Route::get('/category_show',[\App\Http\Controllers\Admin\CategoryController::class,'show'])->name('admin_category_show');
-Route::get('/category_goster',[\App\Http\Controllers\Admin\CategoryController::class,'show'])->name('admin_category_show');
+
 
 
 Route::get('/admin/login', [HomeController::class, 'login'])->name('admin_login');
